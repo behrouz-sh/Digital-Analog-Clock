@@ -3,36 +3,36 @@
   font-family: "f";
   src: url("../fonts/sf-pro-display/SF-Pro-Display-Semibold.otf");
 }
+$black-color: #24292f;
+$white-color: #fafafa;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-
 *,
 *::after,
 *::before {
   box-sizing: inherit;
   outline: none;
 }
-
 body {
-  color: #24292f;
-  background-color: #fafafa;
+  color: $black-color;
+  background-color: $white-color;
   user-select: none;
 }
-
 a,
 a:hover,
 a:active {
-  color: #24292f;
+  color: $black-color;
 }
-
 .container {
   margin: 0 auto;
   height: 100vh;
   width: 1240px;
 }
 
+.header {
+}
 .header-warp {
   display: flex;
   align-items: center;
@@ -43,22 +43,30 @@ a:active {
   box-shadow: 0 0 16px 8px rgba(36, 41, 47, 0.04);
   background-color: #fff;
 }
-
 .logo {
   font-size: 2.4rem;
   font-family: "f";
 }
-
 .header__btn-warp {
   display: flex;
   align-items: center;
   column-gap: 1.6rem;
 }
-
+.header__btn {
+}
+.header__btn {
+}
 .header__btn-icon {
   width: 3.2rem;
   height: auto;
   color: inherit;
 }
 
-/*# sourceMappingURL=main.css.map */
+.setting__btn {
+}
+.setting__btn__icon {
+}
+.github__btn {
+}
+.github__btn-icon {
+}
