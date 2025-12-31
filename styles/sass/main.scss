@@ -87,6 +87,9 @@ a:active {
 .logo {
   font-size: 2.4rem;
   font-family: "f";
+  @include media(578) {
+    font-size: 1.6rem;
+  }
 }
 .header__btn-warp {
   display: flex;
@@ -106,6 +109,9 @@ a:active {
     color: #4479c4;
     transform: scale(1.05);
   }
+  @include media(578) {
+    width: 3.2rem;
+  }
 }
 
 .setting__btn {
@@ -118,25 +124,26 @@ a:active {
 }
 
 .digital-clock {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.digital-clock__text {
-  font-size: 24rem;
-  font-family: h;
-
-  @include media(1200) {
-    font-size: 20rem;
-  }
-  @include media(992) {
-    font-size: 16rem;
-  }
-  @include media(768) {
-    font-size: 12rem;
-  }
+.digital-clock__box {
+  box-shadow: 0 0 16px 8px rgba(36, 41, 47, 0.04);
+  background-color: #fff;
+  margin: 2.4rem 0;
+  border-radius: 3.2rem;
+  padding: 6.4rem;
   @include media(578) {
-    font-size: 16vw;
+    padding: 3.2rem;
+    border-radius: 1.6rem;
   }
+}
+.digital-clock__text {
+  color: $black-color;
+  font-size: 12vw;
+  display: block;
+  width: 50vw;
+  font-family: h;
 }

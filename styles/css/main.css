@@ -68,6 +68,11 @@ a:active {
   font-size: 2.4rem;
   font-family: "f";
 }
+@media (max-width: 578px) {
+  .logo {
+    font-size: 1.6rem;
+  }
+}
 
 .header__btn-warp {
   display: flex;
@@ -85,37 +90,39 @@ a:active {
   color: #4479c4;
   transform: scale(1.05);
 }
+@media (max-width: 578px) {
+  .header__btn-icon {
+    width: 3.2rem;
+  }
+}
 
 .digital-clock {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.digital-clock__text {
-  font-size: 24rem;
-  font-family: h;
-}
-@media (max-width: 1200px) {
-  .digital-clock__text {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 992px) {
-  .digital-clock__text {
-    font-size: 16rem;
-  }
-}
-@media (max-width: 768px) {
-  .digital-clock__text {
-    font-size: 12rem;
-  }
+.digital-clock__box {
+  box-shadow: 0 0 16px 8px rgba(36, 41, 47, 0.04);
+  background-color: #fff;
+  margin: 2.4rem 0;
+  border-radius: 3.2rem;
+  padding: 6.4rem;
 }
 @media (max-width: 578px) {
-  .digital-clock__text {
-    font-size: 16vw;
+  .digital-clock__box {
+    padding: 3.2rem;
+    border-radius: 1.6rem;
   }
+}
+
+.digital-clock__text {
+  color: #24292f;
+  font-size: 12vw;
+  display: block;
+  width: 50vw;
+  font-family: h;
 }
 
 /*# sourceMappingURL=main.css.map */
