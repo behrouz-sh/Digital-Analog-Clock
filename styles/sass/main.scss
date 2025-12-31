@@ -1,9 +1,5 @@
 @import url("./reset-css.css");
 @font-face {
-  font-family: "f";
-  src: url("../fonts/sf-pro-display/SF-Pro-Display-Semibold.otf");
-}
-@font-face {
   font-family: "h";
   src: url("../fonts/sf-pro-display/SF-Pro-Display-Bold.otf");
 }
@@ -86,9 +82,11 @@ a:active {
 }
 .logo {
   font-size: 2.4rem;
-  font-family: "f";
+  font-family: "h";
   @include media(578) {
     font-size: 1.6rem;
+    width: 9.7rem;
+    line-height: 1.2;
   }
 }
 .header__btn-warp {
@@ -146,4 +144,25 @@ a:active {
   display: block;
   width: 50vw;
   font-family: h;
+}
+
+.setting__clock {
+  display: none;
+}
+.setting__clock-box {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: block;
+  z-index: 100;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+.setting__clock-bg {
+  display: block;
+  background-color: rgba(36, 41, 47, 0.4);
+  backdrop-filter: blur(0.4rem);
+  position: absolute;
+  inset: 0;
 }
