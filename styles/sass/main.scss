@@ -146,6 +146,77 @@ a:active {
   font-family: h;
 }
 
+.analog-clock {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock {
+  display: block;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  border: 1rem solid $black-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock::after {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  background-color: $black-color;
+  content: " ";
+  border-radius: 50%;
+}
+.hours,
+.min,
+.sec {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.hours {
+  width: 12rem;
+  height: 12rem;
+  z-index: -1;
+}
+.min {
+  width: 20rem;
+  height: 20rem;
+  z-index: -2;
+}
+.sec {
+  width: 24rem;
+  height: 24rem;
+  z-index: -3;
+}
+.hr::after {
+  content: " ";
+  width: 8px;
+  height: 6.4rem;
+  border-radius: 10rem;
+  background-color: #222222;
+  display: block;
+}
+.mn::after {
+  content: " ";
+  width: 6px;
+  height: 10rem;
+  border-radius: 10rem;
+  background-color: #758a93;
+  display: block;
+}
+.sc::after {
+  content: " ";
+  width: 3px;
+  height: 14rem;
+  border-radius: 10rem;
+  background-color: #dc0000;
+  display: block;
+}
+
 .setting__clock {
   display: none;
 }
