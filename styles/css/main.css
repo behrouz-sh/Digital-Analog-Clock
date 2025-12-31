@@ -3,6 +3,10 @@
   font-family: "f";
   src: url("../fonts/sf-pro-display/SF-Pro-Display-Semibold.otf");
 }
+@font-face {
+  font-family: "h";
+  src: url("../fonts/sf-pro-display/SF-Pro-Display-Bold.otf");
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -29,8 +33,24 @@ a:active {
 
 .container {
   margin: 0 auto;
-  height: 100vh;
-  width: 1240px;
+  padding: 0 2.4rem;
+  max-width: 1200px;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 578px;
+  }
 }
 
 .header-warp {
@@ -38,7 +58,7 @@ a:active {
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 2rem;
-  margin-top: 1.6rem;
+  margin: 2.4rem 0;
   border-radius: 1.6rem;
   box-shadow: 0 0 16px 8px rgba(36, 41, 47, 0.04);
   background-color: #fff;
@@ -59,6 +79,43 @@ a:active {
   width: 3.2rem;
   height: auto;
   color: inherit;
+  transition: all 0.3s ease;
+}
+.header__btn-icon:hover {
+  color: #4479c4;
+  transform: scale(1.05);
+}
+
+.digital-clock {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-clock__text {
+  font-size: 24rem;
+  font-family: h;
+}
+@media (max-width: 1200px) {
+  .digital-clock__text {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 992px) {
+  .digital-clock__text {
+    font-size: 16rem;
+  }
+}
+@media (max-width: 768px) {
+  .digital-clock__text {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 578px) {
+  .digital-clock__text {
+    font-size: 16vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
