@@ -1,6 +1,6 @@
 @import url("./reset-css.css");
 @font-face {
-  font-family: "h";
+  font-family: "SF-Pro-Display-bold";
   src: url("../fonts/sf-pro-display/SF-Pro-Display-Bold.otf");
 }
 html {
@@ -19,6 +19,7 @@ body {
   color: #24292f;
   background-color: #fafafa;
   user-select: none;
+  font-family: "SF-Pro-Display-bold";
 }
 
 a,
@@ -62,7 +63,6 @@ a:active {
 
 .logo {
   font-size: 2.4rem;
-  font-family: "h";
 }
 @media (max-width: 578px) {
   .logo {
@@ -120,10 +120,12 @@ a:active {
   font-size: 12vw;
   display: block;
   width: 50vw;
-  font-family: h;
 }
 
 .analog-clock {
+  display: none;
+  align-items: center;
+  justify-content: center;
   height: 80vh;
 }
 
@@ -135,13 +137,16 @@ a:active {
 
 .clock {
   display: block;
-  min-width: 80rem;
-  min-height: 80rem;
+  min-width: 64rem;
+  min-height: 64rem;
   border-radius: 50%;
   border: 1rem solid #24292f;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(../../images/clock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (max-width: 1200px) {
   .clock {
@@ -230,14 +235,59 @@ a:active {
 }
 
 .setting__clock-box {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
+  max-width: 56rem;
+  height: fit-content;
+  padding: 24px;
+  border-radius: 2.4rem;
+  background-color: #fafafa;
   display: block;
   z-index: 100;
   position: absolute;
   inset: 0;
   margin: auto;
+}
+@media (max-width: 578px) {
+  .setting__clock-box {
+    margin: auto 2.4rem;
+  }
+}
+
+.setting__title-text {
+  display: block;
+  text-align: center;
+  font-size: 2.4rem;
+  border-bottom: 1px solid #969696;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.clock-type__warp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.clock-type__digital-analog {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.6rem;
+  flex-grow: 1;
+  border: 1px solid #24292f;
+  padding: 2.4rem;
+  row-gap: 1.6rem;
+}
+.clock-type__digital-analog:hover {
+  background-color: #eeeeee;
+}
+
+.clock-type__digital-analog--active {
+  background-color: #e9e9e9;
+}
+
+.clock-type__text {
+  font-size: 2rem;
 }
 
 .setting__clock-bg {

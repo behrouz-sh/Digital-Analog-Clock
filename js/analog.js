@@ -3,7 +3,6 @@ function updateTimeAnalog() {
   let hours = now.getHours();
   let min = now.getMinutes();
   let sec = now.getSeconds();
-  console.log(sec);
   document.querySelector(".hours").style.transform = `rotateZ(${(hours % 12) * 30 + min * 0.5}deg)`;
   document.querySelector(".min").style.transform = `rotateZ(${(min * 360) / 60}deg)`;
   document.querySelector(".sec").style.transform = `rotateZ(${(sec * 360) / 60}deg)`;
