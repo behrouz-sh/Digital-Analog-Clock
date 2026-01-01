@@ -125,6 +125,9 @@ a:active {
 
 .analog-clock {
   height: 80vh;
+}
+
+.clock-warp {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,13 +135,33 @@ a:active {
 
 .clock {
   display: block;
-  width: 40rem;
-  height: 40rem;
+  min-width: 80rem;
+  min-height: 80rem;
   border-radius: 50%;
   border: 1rem solid #24292f;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 1200px) {
+  .clock {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 992px) {
+  .clock {
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 768px) {
+  .clock {
+    transform: scale(0.4);
+  }
+}
+@media (max-width: 578px) {
+  .clock {
+    transform: scale(0.3);
+  }
 }
 
 .clock::after {
@@ -159,46 +182,45 @@ a:active {
 }
 
 .hours {
-  width: 12rem;
-  height: 12rem;
-  z-index: -1;
-}
-
-.min {
-  width: 20rem;
-  height: 20rem;
+  width: 24rem;
+  height: 24rem;
   z-index: -2;
 }
 
+.min {
+  width: 32rem;
+  height: 32rem;
+  z-index: -1;
+}
+
 .sec {
-  width: 24rem;
-  height: 24rem;
-  z-index: -3;
+  width: 40rem;
+  height: 40rem;
 }
 
 .hr::after {
   content: " ";
-  width: 8px;
-  height: 6.4rem;
-  border-radius: 10rem;
+  width: 1.2rem;
+  height: 12rem;
+  border-radius: 100% 100% 0 0;
   background-color: #222222;
   display: block;
 }
 
 .mn::after {
   content: " ";
-  width: 6px;
-  height: 10rem;
-  border-radius: 10rem;
+  width: 0.8rem;
+  height: 16rem;
+  border-radius: 100% 100% 0 0;
   background-color: #758a93;
   display: block;
 }
 
 .sc::after {
   content: " ";
-  width: 3px;
-  height: 14rem;
-  border-radius: 10rem;
+  width: 0.4rem;
+  height: 20rem;
+  border-radius: 100% 100% 0 0;
   background-color: #dc0000;
   display: block;
 }
