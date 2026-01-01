@@ -37,7 +37,7 @@ A fully functional **digital and analog clock** built with **HTML, SCSS, and Jav
 
 ## Demo
 
-[View Live Demo](https://behrouz-sh.github.io/digital-analog-clock/)
+[View Live Demo](https://behrouz-sh.github.io/Digital-Analog-Clock/)
 
 ---
 
